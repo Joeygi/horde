@@ -267,43 +267,6 @@ hook.Add("EntityTakeDamage", "Horde_ApplyDamageTaken", function (target, dmg)
     end
     if bonus.resistance >= 1.0 then return true end
 
-    if ply.Horde_Special_Armor then
-        local armor = ply.Horde_Special_Armor
-        local dmgtype = dmg:GetDamageType()
-        if armor == "armor_assault" then
-            if HORDE:IsBallisticDamage(dmg) then
-                bonus.resistance = bonus.resistance + 0.08
-            end
-        elseif armor == "armor_heavy" then
-        elseif armor == "armor_medic" then
-            if HORDE:IsPoisonDamage(dmg) then
-                bonus.resistance = bonus.resistance + 0.08
-            end
-        elseif armor == "armor_demolition" then
-            if HORDE:IsBlastDamage(dmg) then
-                bonus.resistance = bonus.resistance + 0.08
-            end
-        elseif armor == "armor_ghost" then
-            bonus.evasion = bonus.evasion + 0.05
-        elseif armor == "armor_engineer" then
-            bonus.resistance = bonus.resistance + 0.05
-        elseif armor == "armor_warden" then
-            if HORDE:IsLightningDamage(dmg) then
-                bonus.resistance = bonus.resistance + 0.08
-            end
-        elseif armor == "armor_cremator" then
-            if HORDE:IsFireDamage(dmg) then
-                bonus.resistance = bonus.resistance + 0.08
-            end
-        elseif armor == "armor_berserker" then
-            if dmgtype == DMG_SLASH or dmgtype == DMG_CLUB then
-                bonus.resistance = bonus.resistance + 0.08
-            end
-        elseif armor == "armor_survivor" then
-            bonus.resistance = bonus.resistance + 0.05
-        end
-    end
-
     dmg:ScaleDamage(bonus.less * (1 - bonus.resistance))
     dmg:SubtractDamage(bonus.block)
 
@@ -353,13 +316,51 @@ hook.Add("EntityTakeDamage", "Horde_ApplyDamageTaken", function (target, dmg)
     end
 end)
 
+hook.Add("Horde_OnPlayerDamageTaken", "Horde_SpecialArmor", function (ply, dmg, bonus)
+    if not ply.Horde_Special_Armor then return end
+    local armor = ply.Horde_Special_Armor
+    local dmgtype = dmg:GetDamageType()
+    if armor == "armor_assault" then
+        if HORDE:IsBallisticDamage(dmg) then
+            bonus.resistance = bonus.resistance + 0.08
+        end
+    elseif armor == "armor_heavy" then
+    elseif armor == "armor_medic" then
+        if HORDE:IsPoisonDamage(dmg) then
+            bonus.resistance = bonus.resistance + 0.08
+        end
+    elseif armor == "armor_demolition" then
+        if HORDE:IsBlastDamage(dmg) then
+            bonus.resistance = bonus.resistance + 0.08
+        end
+    elseif armor == "armor_ghost" then
+        bonus.evasion = bonus.evasion + 0.05
+    elseif armor == "armor_engineer" then
+        bonus.resistance = bonus.resistance + 0.05
+    elseif armor == "armor_warden" then
+        if HORDE:IsLightningDamage(dmg) then
+            bonus.resistance = bonus.resistance + 0.08
+        end
+    elseif armor == "armor_cremator" then
+        if HORDE:IsFireDamage(dmg) then
+            bonus.resistance = bonus.resistance + 0.08
+        end
+    elseif armor == "armor_berserker" then
+        if dmgtype == DMG_SLASH or dmgtype == DMG_CLUB then
+            bonus.resistance = bonus.resistance + 0.08
+        end
+    elseif armor == "armor_survivor" then
+        bonus.resistance = bonus.resistance + 0.05
+    end
+end)
+
 hook.Add("EntityTakeDamage", "Horde_ApplyMinionDamageTaken", function (target, dmg)
     if not target:IsValid() or not HORDE:IsPlayerMinion(target) then return end
     if dmg:GetAttacker():IsPlayer() then return true end
     hook.Run("Horde_OnMinionDamageTaken", target, dmg)
     if dmg:GetDamage() <= 0.5 then return true end
 
-    if dmg:GetAttacker():GetClass() == "npc_vj_horde_grigori" or dmg:GetAttacker().Horde_Plague_Soldier then
+    if dmg:GetAttacker().Horde_Plague_Soldier then
         dmg:ScaleDamage(2.5)
     end
 
