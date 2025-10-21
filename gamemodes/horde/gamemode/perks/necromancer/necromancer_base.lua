@@ -1,5 +1,6 @@
 PERK.PrintName = "Necromancer Base"
 PERK.Description = [[
+The Necromancer focuses on ice spells and ice based minions.
 COMPLEXITY: MEDIUM
 
 Inflicts Frostbite buildup by {1} of base Cold damage. ({2} + {3} per level, up to {4}).
