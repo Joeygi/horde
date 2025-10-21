@@ -1,6 +1,7 @@
 PERK.PrintName = "Tren Perfume"
 PERK.Description =
-[[Adds {1} maximum Hypertrophy stacks. Press R to shoot a lingering spore cloud.
+[[Adds {1} maximum Hypertrophy stacks. Press R to spit a ball of pheromones.
+Spit projectile inflicts Break on hit and leaves behind a lingering cloud.
 Cloud provides Hypertrophy to players and deals {4} Poison damage in an area.
 Effect lasts for {2} seconds and has a cooldown of {3} seconds.]]
 PERK.Icon = "materials/perks/carcass/aas_perfume.png"
@@ -8,7 +9,7 @@ PERK.Params = {
     [1] = { value = 2 },
     [2] = { value = 5 },
     [3] = { value = 8 },
-    [4] = { value = 50 },
+    [4] = { value = 100 },
 }
 
 PERK.Hooks = {}
