@@ -1,5 +1,6 @@
 PERK.PrintName = "Warlock Base"
 PERK.Description = [[
+The Warlock class utilizes slow, but extremely powerful spells.
 COMPLEXITY: HIGH
 
 {1} increased maximum Mind. ({2} per level, up to {3}).
