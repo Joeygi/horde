@@ -133,7 +133,7 @@ function ENT:Think()
         dmg:SetAttacker(self.Owner)
         dmg:SetInflictor(self)
         dmg:SetDamageType(DMG_NERVEGAS)
-        dmg:SetDamage(50)
+        dmg:SetDamage(100)
         dmg:SetDamageCustom(HORDE.DMG_PLAYER_FRIENDLY)
         util.BlastDamageInfo(dmg, self:GetPos(), 200)
 
@@ -142,6 +142,7 @@ function ENT:Think()
         self.NextDamageTick = CurTime() + 0.5
 
         if self.SpawnTime + self.FireTime <= CurTime() then self:Remove() return end
+        self:Horde_AddDebuffBuildup(HORDE.Status_Break, d:GetDamage() * 0.5, ent:GetOwner(), self:GetPos()) 
     end
 end
 
