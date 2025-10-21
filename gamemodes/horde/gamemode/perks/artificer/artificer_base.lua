@@ -1,8 +1,9 @@
 PERK.PrintName = "Artificer Base"
 PERK.Description = [[
+The Artificer class utilizes fire and lightning based spells.
 COMPLEXITY: MEDIUM
 
-Inflicts Lightning buildup by {1} of base Lightning damage. ({2} + {3} per level, up to {4}).
+Inflicts Shock buildup by {1} of base Lightning damage. ({2} + {3} per level, up to {4}).
 {5} increased Fire and Lightning damage. ({6} per level, up to {7}).
 
 Uses Mind instead of Armor.
