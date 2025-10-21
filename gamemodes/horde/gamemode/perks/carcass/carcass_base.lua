@@ -1,17 +1,17 @@
 PERK.PrintName = "Carcass Base"
 PERK.Description = [[
-The Carcass class uses its high health and regeneration for various effects.
+The Carcass class sacrifices all firepower for unmatched strength & agility.
 Complexity: HIGH
 
 {1} increased maximum health. ({2} + {3} per level, up to {4}).
 
 {5} chance to gain Hypertrophy when you hit an enemy ({6} chance on headshot).
-100% chance to gain Hypertrophy when you are hit.
+Gain 1 Hypertrophy stack when you are hit.
 Each Hypertrophy stack reduces damage taken by {7}.
 Each Hypertrophy stack regenerates {8} health per second.
 
 Equipped with Carcass Biosystem.
-Cannot use any other weapons other than medkits because your hands are fucked.
+Can only use your fists & medkit.
 LMB: Punch
 Hold for a charged punch that deals increased damage in an area.]]
 PERK.Icon = "materials/subclasses/carcass.png"
