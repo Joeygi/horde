@@ -1,5 +1,6 @@
 PERK.PrintName = "Psycho Base"
 PERK.Description = [[
+The Psycho can sacrifice health for increased damage.
 {1} chance to deal a Critical Hit. ({2} + {3} per level, up to {4}).
 You deal 50% more damage on Critical Hit.
 
