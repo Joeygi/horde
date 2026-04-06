@@ -538,7 +538,7 @@ function HORDE:GetDefaultItemsData()
     HORDE:CreateItem( "SMG", "Nailgun", "arccw_horde_nailgun", 100, 2,
         "Vladivostok Pneumatic Nailgun.\nFires serrated nails that inflict Slashing damage.",
         { Berserker = true, Samurai = true, ["Cyborg Ninja"] = true },
-        2, -1, nil, nil, { HORDE.DMG_SLASH }, nil, { "Berserker", "Samurai",["Cyborg Ninja"]  } )
+        2, -1, nil, nil, { HORDE.DMG_SLASH }, nil, { "Berserker", "Samurai" } )
     HORDE:CreateItem( "SMG", "UZI", "arccw_horde_uzi", 1250, 3,
         "UZI Submachine Gun.\nDesigned by Captain (later Major) Uziel Gal of the IDF following the 1948 Arab-Israeli War.",
         { Survivor = true, Psycho = true, Prototype = true, Assault = true, SpecOps = true, Reverend = true, Heavy = true, Juggernaut = true, Medic = true, Hatcher = true, Engineer = true, Cremator = true },
