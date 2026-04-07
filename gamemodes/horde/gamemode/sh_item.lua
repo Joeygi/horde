@@ -447,7 +447,7 @@ function HORDE:GetDefaultItemsData()
     HORDE:CreateItem( "Pistol", "Flare Revolver", "arccw_horde_flamepistol", 100, 2,
         "Colt Python loaded with incindiary rounds.\nIgnites enemies and deals Fire damage.",
         { Gunslinger = true, Cremator = true },
-        1, -1, nil, nil, nil, nil, { HORDE.DMG_FIRE }, nil, { "Cremator" } )
+        1, -1, nil, "items/hl2/weapon_357.png", nil, nil, { HORDE.DMG_FIRE }, nil, { "Cremator" } )
     HORDE:CreateItem( "Pistol", "Flare Gun (Hidden)", "projectile_horde_flaregun_flare", 0, 0,
         "This item is only here in the Pistol category to calculate pistol damage.",
         { Gunslinger = true, Cremator = true },
