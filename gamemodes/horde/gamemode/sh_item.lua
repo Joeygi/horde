@@ -613,7 +613,7 @@ function HORDE:GetDefaultItemsData()
         { Survivor = true, Psycho = true, Prototype = true, Assault = true, SpecOps = true, Reverend = true, Heavy = true, Juggernaut = true, Engineer = true, Warden = true, Overlord = true },
         10, -1, nil, nil, nil, nil, { HORDE.DMG_BALLISTIC } )
     HORDE:CreateItem( "Shotgun", "Trench Gun", "arccw_horde_trenchgun", 2250, 6,
-        "Winchester Model 1200.\nShoots incendiary pellets.",
+        "Winchester Model 1897.\nShoots incendiary pellets.",
         { Prototype = true, Warden = true, Overlord = true, Cremator = true },
         15, -1, nil, nil, { Warden = 1, Cremator = 1 }, nil, { HORDE.DMG_FIRE }, { HORDE.Infusion_Quality, HORDE.Infusion_Impaling } )
     HORDE:CreateItem( "Shotgun", "Double Barrel", "arccw_horde_doublebarrel", 2250, 5,
@@ -711,7 +711,7 @@ function HORDE:GetDefaultItemsData()
         { Ghost = true, Gunslinger = true },
         10, -1, nil, nil, nil, nil, { HORDE.DMG_BALLISTIC } )
     HORDE:CreateItem( "Rifle", "Fucket", "arccw_horde_fucket_rifle", 2750, 7,
-        "Break-action double-barrel musket.\ndebatable whether its unholy or not",
+        "Break-action double-barrel musket.\nDebatable whether its unholy or not.",
         { Survivor = true, Psycho = true, Ghost = true, Gunslinger = true },
         10, -1, nil, nil, nil, nil, { HORDE.DMG_BALLISTIC } )
 
@@ -719,12 +719,12 @@ function HORDE:GetDefaultItemsData()
         "CheyTec M200 Intervention.\nAmerican bolt-action sniper rifle.",
         { Ghost = true, Gunslinger = true },
         15, -1, nil, nil, nil, nil, { HORDE.DMG_BALLISTIC } )
-    HORDE:CreateItem( "Rifle", "Barrett AMR", "arccw_horde_barret", 3500, 10,
-        ".50 Cal Anti-Material Sniper Rifle.\nDoes huge amounts of ballistic damage.",
+    HORDE:CreateItem( "Rifle", "Barrett M82A1", "arccw_horde_barret", 3500, 10,
+        ".50 BMG Anti-Material Sniper Rifle.\nDoes huge amounts of ballistic damage.",
         { Ghost = true, Gunslinger = true },
         50, -1, nil, nil, { Ghost = 5 }, nil, { HORDE.DMG_BALLISTIC } )
     HORDE:CreateItem( "Rifle", "Barrett M99", "arccw_horde_m99", 4000, 10,
-        "Barrett M99. \nDeals a higher amount of damage than the Barrett AMR, but can only carry 1 round at a time.",
+        "Barrett M99. \nDeals a higher amount of damage than the M82, but can only carry 1 round at a time.",
         { Ghost = true, Gunslinger = true },
         5, -1, nil, nil, { Ghost = 5 }, nil, { HORDE.DMG_BALLISTIC } )
 
